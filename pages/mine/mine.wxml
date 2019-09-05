@@ -1,0 +1,26 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <view class="head">
+    <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo_avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo_nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="useraccount" bindtap='toAccount' hover-class="hover_css">
+    <text class="useraccount_text">我的账户</text>
+    <image class="useraccount_image" src="../../images/mine/many.png"></image>
+  </view>
+  <view class="userassess" bindtap='toAssess' data-url="../assess/assess?reply_status={{reply_status}}" hover-class="hover_css">
+    <text class="userassess_text">反馈建议</text>
+    <block wx:if="{{reply_status == 1}}">
+      <view class='reddot'></view>
+    </block>
+    <image class="userassess_image" src="../../images/mine/many.png"></image>
+  </view>
+  <!-- 
+  <view class="userset" hover-class="hover_css">
+    <text class="userset_text" decode="{{true}}" >设置&emsp;&emsp;</text>
+    <image class="userset_image" src="../../images/mine/many.png"></image>
+  </view>
+  -->
+</view>

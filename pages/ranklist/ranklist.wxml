@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="myrank">
+    <view class="title">
+      <text class="title_text">我的排名</text>
+    </view>
+    <view class="body">
+      <view class="myrank_left">
+        <text class="myrank_left_text1">名次</text>
+        <text class="myrank_left_text2">{{no}}</text>
+      </view>
+      <view class="myrank_center">
+        <view class="userinfo-avatar">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+      </view>
+      <view class="myrank_right">
+        <text class="myrank_right_text1">已完成</text>
+        <text class="myrank_right_text2">{{num}}</text>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view scroll-y="true">
+    <view class="ranklist">
+      <block wx:for-items="{{user}}" wx:key="*user">
+        <view class="useritem {{id==item.tid?'active':''}}" bindtap="toRatingTech" data-url="../rating_technician/rating_technician?tid={{item.tid}}" hover-class="hover_class">
+          <view class="no">   
+            <view wx:if="{{item.ranknum == 1}}">
+              <image class="img1" src="../../images/index/rank1.png"></image>
+            </view>
+            <view wx:elif="{{item.ranknum == 2}}">
+              <image class="img1" src="../../images/index/rank2.png"></image>
+            </view>
+            <view wx:elif="{{item.ranknum == 3}}">
+              <image class="img1" src="../../images/index/rank3.png"></image>
+            </view>
+            <view wx:else>
+              <text class="no_text">{{item.ranknum}}</text>
+            </view>
+          </view>
+          <view class="usermsg">
+            <view class="image">
+              <image class="image_img" src="{{item.avatarurl}}" />
+            </view>
+            <view class="info">
+              <text class="info_nickname">{{item.nickname}}</text>
+            </view>
+            <view class="num">
+              <text class="num_text">{{item.t_completed_number}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,163 @@
+page{
+  background-color: #fff;
+}
+.container{
+  width: 100%;
+  height: 100%;
+}
+.myrank{
+  height: 280rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #292421;
+  box-shadow: 0px 2px 20rpx #b8bacc;
+}
+.myrank .title{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title .title_text{
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: bold;
+}
+.myrank .body{
+  height: 80%;
+  width: 100%;
+  display: flex;
+}
+.body .myrank_left{
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.myrank_left .myrank_left_text1{
+  text-align: center;
+  font-size: 26rpx;
+  color: #fff;
+  font-weight: bold;
+}
+.myrank_left .myrank_left_text2{
+  text-align: center;
+  font-size: 40rpx;
+  color: #fff;
+  font-weight: bold;
+}
+.body .myrank_center{
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myrank_center .userinfo-avatar {
+  overflow:hidden;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); */
+}
+.body .myrank_right{
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.myrank_right .myrank_right_text1{
+  text-align: center;
+  font-size: 26rpx;
+  color: #fff;
+  font-weight: bold;
+}
+.myrank_right .myrank_right_text2{
+  text-align: center;
+  font-size: 40rpx;
+  color: #fff;
+  font-weight: bold;
+}
+.ranklist{
+  margin-bottom: 20rpx;
+  /*width: 90%;
+  margin-left: 5%;*/
+}
+.ranklist .useritem{
+  height: 140rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.ranklist .hover_class{
+  opacity: 0.9;
+  background-color: #f7f7f7;
+}
+.ranklist .active{
+  background-color: #f7f7f7;
+}
+.useritem .no{
+  width: 15%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no .no_text{
+  color: #292421;
+  font-weight: bold;
+  font-size: 40rpx;
+  font-family: Tahoma,Arial,"Hiragino Sans GB",simsun,sans-serif;
+}
+.no .img1{
+  width: 80rpx;
+  height: 80rpx;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.useritem .usermsg{
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #dedede;
+}
+.usermsg .image{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image .image_img{
+  overflow:hidden;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.usermsg .info{
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.info .info_nickname{
+  font-size: 36rpx;
+  font-weight: 550;
+}
+.usermsg .num{
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.num .num_text{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #0fb6a5;
+}
+

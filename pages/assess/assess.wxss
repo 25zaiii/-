@@ -1,0 +1,220 @@
+page{
+  background-color: #f0f0f0;
+}
+.container{
+  width: 100%;
+  height: 100%;
+}
+.navbar{
+  background-color: #fefefe;/*#bef1eb*/
+  display: flex;
+  /* align-items: center; */
+  height: 100rpx;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 99;
+}
+.navbar .navbar_text{
+  color: #444444;
+  text-align: center;
+  font-size: 34rpx;
+  flex-grow: 1;
+  padding: 25rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar_text .reddot{
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  background: red;
+  left: 270rpx;
+  top: 25rpx;
+  position: absolute;
+  box-shadow: 1px 1px 10rpx rgba(0, 0, 0, 0.2);
+}
+.navbar .active{
+  font-size: 36rpx;
+  color: #292421;
+  border-bottom: #292421 5rpx solid ;
+  /* border-bottom-left-radius: 4rpx;
+  border-bottom-right-radius: 4rpx; */
+}
+.body{
+  height: 90%;
+  margin-top: 100rpx;
+}
+.body .user_rating{
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 1px 1px 10rpx #b8bacc;
+  border-radius: 20rpx;
+  background-color: #ffffff;
+}
+.user_rating .userinfo{
+  border-bottom: #dedede 1px dashed;
+  display: flex;
+}
+.userinfo .avatar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15rpx;
+}
+.avatar .img{
+  overflow:hidden;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.userinfo .nickname{
+  display: flex;
+  align-items: center;
+}
+.nickname .nickname_txt{
+  font-size: 24rpx;
+  color: #b8bacc;
+  padding: 15rpx;
+}
+.userinfo .identity{
+  display: flex;
+  align-items: center;
+}
+.identity .identity_txt{
+  font-size: 24rpx;
+  color: #b8bacc;
+  padding: 15rpx;
+}
+.userinfo .status_hasreply{
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  margin-left: auto;
+}
+.status_hasreply .status_hasreply_txt{
+  font-size: 24rpx;
+  color: #0fb6a5;
+  padding: 15rpx;
+}
+.userinfo .status_hasnoreply{
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  margin-left: auto;
+}
+.status_hasnoreply .status_hasnoreply_txt{
+  font-size: 24rpx;
+  color: #b8bacc;
+  padding: 15rpx;
+}
+.user_rating .rating{
+  padding: 5rpx 0;
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.rating .rating_txt{
+  font-size: 32rpx;
+  padding: 15rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.user_rating .time{
+  border-top: #dedede 1px dashed;
+  display: flex;
+  align-items: center;
+}
+.time .time_txt{
+  font-size: 24rpx;
+  color: #b8bacc;
+  padding: 15rpx;
+  /* margin-right: 0;
+  margin-left: auto; */
+}
+.time .delete_btn{
+  padding: 15rpx;
+  margin-right: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.delete_btn .delete_txt{
+  font-size: 24rpx;
+  padding-bottom: 2rpx;
+  border-bottom: #0fb6a5 1rpx solid;
+  color: #0fb6a5;
+}
+.user_rating .reply{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0;
+  background-color: #292421;
+
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+.reply .reply_all{
+  width: 100%;
+  font-size: 0;
+  display: inline-block;
+  align-items: center;
+  padding: 0 15rpx; 
+}
+.reply_all .title{
+  font-size: 24rpx;
+  color: #fff;
+}
+.reply_all .content{
+  font-size: 24rpx;
+  color: #fff;
+}
+.assess_new{
+  border-radius: 50%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 100rpx;
+  right: 50rpx;
+  width: 85rpx;
+  height: 85rpx;
+  /* opacity: 0.4; */
+  /* border: #dedede 1px solid; */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.myreply{
+  width: 100%;
+  border-radius: 12rpx;
+  /* background-color: white;  */
+  border: #b8bacc 1rpx solid; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.myreply .textarea{
+  width: 98%;
+  margin: 10rpx auto;
+  font-size: 32rpx;
+  z-index: 99;
+  color: #222
+}
+.myreply .txt{
+  color: #aaa;
+  margin-right: 10rpx;
+  margin-left: auto;
+  font-size: 28rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.noAssess{
+  margin-top: 20%;
+  width: 100%;
+  text-align: center;
+  color: #292421;
+}

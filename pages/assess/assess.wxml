@@ -1,0 +1,125 @@
+<view class="container">
+
+  <view class="navbar">
+    <block wx:for-items="{{navbar}}" wx:key="*navbar">
+      <view class="navbar_text {{currentNavbar==item.name?'active':''}}" bindtap="switchNavbar" data-name="{{item.name}}">
+        {{item.name}}
+        <block wx:if="{{item.name == '我的建议' && reply_status == 1}}">
+          <view class='reddot'></view>
+        </block>
+      </view>
+    </block>
+  </view>
+
+  <view class="body">
+    <scroll-view scroll-y="true">
+      <block wx:if="{{rating[0] != null}}">
+        <block wx:for-items="{{rating}}" wx:key="*creat_time">
+          <block wx:if="{{currentNavbar == '所有建议'}}">
+            <view class="user_rating">
+              <view class="userinfo">
+                <view class="avatar">
+                  <image class="img" src="{{item.avatarurl}}" />
+                </view>
+                <view class="nickname">
+                  <text class="nickname_txt">{{item.nickname}}</text>
+                </view>
+                <block wx:if="{{item.uort == 0}}">
+                  <view class="identity">
+                    <text class="identity_txt">( 尊贵的技术员 )</text>
+                  </view>
+                </block>
+                <block wx:else>
+                  <view class="identity">
+                    <text class="identity_txt">( 垃圾用户 )</text>
+                  </view>
+                </block>
+                <block wx:if="{{item.reply != null}}">
+                  <view class="status_hasreply">
+                    <text class="status_hasreply_txt">已回复</text>
+                  </view>
+                </block>
+                <block wx:else>
+                  <view class="status_hasnoreply">
+                    <text class="status_hasnoreply_txt">未回复</text>
+                  </view>
+                </block>
+              </view>
+              <view class="rating">
+                <text class="rating_txt">{{item.feedback}}</text>
+              </view>
+              <view class="time">
+                <text class="time_txt">{{item.creat_time}}</text>
+              </view>
+              <block wx:if="{{item.reply != null }}">
+                <view class="reply">
+                  <view class="reply_all">
+                    <text class="title">管理员回复：</text>
+                    <text class="content">{{item.reply}}</text>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </block>
+          <block wx:else>
+            <view class="user_rating">
+              <view class="userinfo">
+                <view class="nickname">
+                  <text class="nickname_txt">我</text>
+                </view>
+                <block wx:if="{{item.reply != null}}">
+                  <view class="status_hasreply">
+                    <text class="status_hasreply_txt">已回复</text>
+                  </view>
+                </block>
+                <block wx:else>
+                  <view class="status_hasnoreply">
+                    <text class="status_hasnoreply_txt">未回复</text>
+                  </view>
+                </block>
+              </view>
+              <view class="rating">
+                <text class="rating_txt">{{item.feedback}}</text>
+              </view>
+              <view class="time">
+                <text class="time_txt">{{item.creat_time}}</text>
+                <view class="delete_btn" bindtap="deleteAssess" data-wfid="{{item.wfid}}">
+                  <text class="delete_txt">删除</text>
+                </view>
+              </view>
+              <block wx:if="{{item.reply != null }}">
+                <view class="reply">
+                  <view class="reply_all">
+                    <text class="title">管理员回复：</text>
+                    <text class="content">{{item.reply}}</text>
+                  </view>
+                </view>
+              </block>
+            </view>
+            <image bindtap='showModal' class="assess_new" src="../../images/assess/assess_new4.png" />
+          </block>
+        </block>
+      </block>
+      <block wx:else>
+        <block wx:if="{{currentNavbar == '所有建议'}}">
+          <view class="noAssess">
+            暂无建议哦
+          </view>
+        </block>
+        <block wx:else>
+          <view class="noAssess">
+            暂无建议哦
+          </view>
+          <image bindtap='showModal' class="assess_new" src="../../images/assess/assess_new4.png" />
+        </block>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+
+<modal hidden="{{hiddenModal}}" title="发布建议" confirm-text="提交" cancel-text="取消" bindconfirm="modelconfirm" bindcancel="modelcancel">
+  <view class="myreply">
+    <textarea class="textarea" bindinput="bindText" maxlength='140' placeholder="在此输入..." name="textarea" value="{{txt}}"></textarea>
+    <text class="txt">{{txt_length}}/140</text>
+  </view>
+</modal>

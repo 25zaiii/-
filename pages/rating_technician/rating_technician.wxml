@@ -1,0 +1,35 @@
+<view class="container">
+  <block wx:if="{{rating[0] != null}}">
+    <block wx:for-items="{{rating}}" wx:key="*rating">
+      <view class="user_rating">
+        <view class="userinfo">
+          <view class="avatar">
+            <image class="img" src="{{item.avatarurl}}" />
+          </view>
+          <view class="nickname">
+            <text class="nickname_txt">{{item.nickname}}</text>
+          </view>
+        </view>
+        <view class="rating">
+          <text class="rating_txt">{{item.comment}}</text>
+        </view>
+        <view class="time">
+          <text class="time_txt">{{item.comment_time}}</text>
+        </view>
+        <block wx:if="{{item.reply != null }}">
+          <view class="reply">
+            <view class="reply_c">
+              <text class="title">技术员回复：</text>
+              <text class="content">{{item.reply}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="noRating">
+      暂无评论哦
+    </view>
+  </block>
+</view>

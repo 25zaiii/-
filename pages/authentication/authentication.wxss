@@ -1,0 +1,74 @@
+page{
+  background-color: #292421;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  margin-top: 50%;
+}
+.body{
+  width: 100%;
+}
+.body .box1{
+  width: 90%;
+  height: 100rpx;
+  margin: 20rpx auto;
+  /* background-color: #f5f5f5; */
+  display: flex;
+  align-items: center;
+  border-bottom: #fff 1rpx solid;
+}
+.box1 .textarea1{
+  height: 45%;
+  line-height: 45rpx;
+  width: 90%;
+  margin-left: 5%;
+  font-size: 34rpx;
+  color: #fff;
+  /* border: #000 1rpx solid; */
+  /* display: inline-block; */
+}
+.body .box2{
+  width: 90%;
+  height: 100rpx;
+  margin: 20rpx auto;
+  /* background-color: #fff; */
+  display: flex;
+  align-items: center;
+  border-bottom: #fff 1rpx solid;
+}
+.box2 .textarea2{
+  height: 45%;
+  line-height: 45rpx;
+  width: 50%;
+  margin-left: 5%;
+  font-size: 34rpx;
+  color: #fff;
+  /* border: #000 1rpx solid; */
+}
+.box2 .send{
+  margin-right: 2.5%;
+  margin-left: auto;
+  background-color: #fff;
+  border-radius: 12rpx;
+  font-size: 22rpx;
+  color: #000;
+  width: 180rpx;
+}
+.send .send_txt{
+  font-size: 24rpx;
+  color: #000;
+}
+.button{
+  margin: 30rpx auto;
+  width: 80%;
+  padding: 10rpx 0;
+  border-radius: 20rpx;
+  background-color: #fff;
+  box-shadow: 1rpx 1rpx 5rpx #dedede;
+  text-align: center;
+}
+.button .button_txt{
+  color: #000;
+  font-size: 34rpx;
+}

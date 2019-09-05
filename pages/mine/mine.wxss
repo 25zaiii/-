@@ -1,0 +1,124 @@
+/* pages/mine/mine.wxss */
+page{
+  background-color: #fff;
+}
+.container{
+  width: 100%;
+  height: 100%;
+}
+.head{
+  height: 400rpx;
+  width: 100%;
+  display: flex;
+  background-color: #292421;
+  /* border-bottom: #dedede 1px solid; */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 20rpx #b8bacc;
+}
+.head .userinfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo .userinfo_avatar {
+  overflow:hidden;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.userinfo .userinfo_nickname {
+  margin-top: 20rpx; 
+  color: #fff;
+}
+.useraccount{
+  height: 80rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  border-top: #dedede 1px solid;
+  border-bottom: #dedede 1px solid;
+  box-shadow: 0px 0px 4rpx #b8bacc;
+  background-color: #292421;
+  display: flex;
+  align-items: center;
+}
+.hover_css{
+  opacity: 0.9;
+  background-color: grey;
+}
+.useraccount .useraccount_text{
+  color: #fff;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  font-weight: bold;
+}
+.useraccount .useraccount_image{
+  height: 30rpx;
+  width: 20rpx;
+  padding-right: 20rpx;
+  margin-right: 0;
+  margin-left: auto;
+}
+.userassess{
+  height: 80rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  border-top: #dedede 1px solid;
+  border-bottom: #dedede 1px solid;
+  box-shadow: 0px 0px 4rpx #b8bacc;
+  background-color: #292421;
+  display: flex;
+  align-items: center;
+}
+.hover_css{
+  opacity: 0.9;
+  background-color: gray;
+}
+.userassess .userassess_text{
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: bold;
+  padding-left: 20rpx;
+}
+.userassess .reddot{
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background: red;
+  /* margin-right: 20rpx;
+  margin-left: auto; */
+  right: 50rpx;
+  /* top: 16rpx; */
+  position: absolute;
+  box-shadow: 1px 1px 10rpx rgba(0, 0, 0, 0.2);
+}
+.userassess .userassess_image{
+  height: 30rpx;
+  width: 20rpx;
+  padding-right: 20rpx;
+  margin-right: 0rpx;
+  margin-left: auto;
+}
+.userset{
+  height: 80rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  border-top: #dedede 1px solid;
+  border-bottom: #dedede 1px solid;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.userset .userset_text{
+  color: black;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  font-weight: bold;
+}
+.userset .userset_image{
+  height: 30rpx;
+  width: 20rpx;
+  margin-left: 560rpx;
+}

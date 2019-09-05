@@ -1,0 +1,133 @@
+page{
+  background-color: #f0f0f0;
+}
+.content{
+  width: 100%;
+  margin-bottom: 100rpx;
+  margin-top: 20rpx;
+}
+.content .body{
+  padding: 20rpx 0;
+  width: 95%;
+  margin-left: 2.5%;
+  box-shadow: 1px 1px 10rpx #b8bacc;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+.body .info{
+  width: 90%;
+  margin-left: 5%;
+  padding: 15rpx 0;
+  display: flex;
+  align-items: center;
+  border-bottom: #b8bacc 1rpx dashed;
+}
+.info .info_left{
+  margin-left: 0;
+  margin-right: auto;
+  font-size: 32rpx;
+}
+.info_left .img{
+  width: 100rpx;
+  height: 100rpx;
+  overflow:hidden;
+  border-radius: 50%;
+}
+info .info_right{
+  margin-left: auto;
+  margin-right: 0;
+}
+.info_right .right_value{
+  font-size: 32rpx;
+  color: #b8bacc;
+}
+.body .content_ques{
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 20rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content_ques .ques{
+  width: 20%;
+  font-size: 30rpx;
+  color: #b8bacc;
+  padding: 15rpx 0;
+  /* border-bottom: #b8bacc 0.5rpx dashed; */
+}
+.content_ques .ques_text{
+  padding: 15rpx 0;
+  font-size: 30rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.content_ques .content_image{
+  margin: 20rpx 0;
+  overflow: hidden;
+  width: 100%;
+}
+.content_image image{
+  width: 33.33%;
+  height: 180rpx;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 14rpx;
+  padding: 2rpx;
+}
+.content_button{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.content_button_other{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+.content_button .btn_search{
+  background-color: #0fb6a5;
+  color: white;
+}
+.content_button_other .btn_dealing{
+  background-color: #f08521;
+  color: white;
+  flex-grow: 1;
+  margin: 0 0.5rpx;
+}
+.content_button_other .btn_finish{
+  background-color: #e24242;
+  color: white;
+  flex-grow: 1;
+  margin: 0 0.5rpx;
+}
+.content_button .btn_rating{
+  background-color: #292421;
+  color: white;
+}
+.alterbox{
+  width: 100%;
+  border-radius: 12rpx;
+  /* background-color: white;   */
+  border: #b8bacc 1rpx solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.alterbox .textarea{
+  width: 98%;
+  margin: 10rpx auto;
+  font-size: 32rpx;
+  z-index: 99;
+  color: #222
+}
+.alterbox .txt{
+  color: #aaa;
+  margin-right: 10rpx;
+  margin-left: auto;
+  font-size: 28rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}

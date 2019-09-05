@@ -1,0 +1,64 @@
+<view class="container">
+  <view class="body">
+    <view class="group">
+      <view class="name">
+        昵称
+      </view>
+      <view class="txt">
+        {{nickname}}
+      </view>
+    </view>
+    <view class="group">
+      <view class="name">
+        性别
+      </view>
+      <view class="txt">
+        {{gender}}
+      </view>
+    </view>
+    <view class="group">
+      <view class="name">
+        省份
+      </view>
+      <view class="txt">
+        {{province}}
+      </view>
+    </view>
+    <view class="group">
+      <view class="name">
+        城市
+      </view>
+      <view class="txt">
+        {{city}}
+      </view>
+    </view>
+    <view class="group_bottom">
+      <view class="name_bottom">
+        手机
+      </view>
+      <view class="txt_bottom_tel">
+        {{telnumber}}
+      </view>
+      <button class="btn" size='default' bindtap="toAuthen">修改</button>
+      <!-- <image class="img" src="../../images/mine/many.png" /> -->
+    </view>
+  </view>
+  <view class="body" style='margin-top: 20rpx;'>
+    <view class="group_bottom">
+      <view class="name_bottom">
+        创建日期
+      </view>
+      <view class="txt_bottom">
+        {{create_time}}
+      </view>
+    </view>
+  </view>
+  <!-- <view class="button">
+    <block wx:if="{{hasModify}}">
+      <button class="btn1" bindtap="confirm">确认修改</button>
+    </block>
+    <block wx:else>
+      <button class="btn2">确认修改</button>
+    </block>
+  </view> -->
+</view>

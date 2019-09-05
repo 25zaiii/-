@@ -1,0 +1,102 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true">
+    <view class="index_swiper">
+      <swiper indicator-dots="{{indicatordots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:420rpx">
+        <block wx:for-items="{{imageUrls}}" wx:key='*imageUrls'>
+          <swiper-item>
+            <image src="{{item}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!-- 
+    <view class="index_icon">
+      <block wx:for-items="{{icon}}" wx:key='*icon'>
+        <view class="icon" bindtap='toTap' data-url="{{item.url}}">
+          <view class="images">
+            <image src="{{item.imgurl}}"></image>
+          </view>
+          <view class="text">
+            {{item.name}}
+          </view>
+        </view>
+      </block>
+    </view>
+    -->
+    <view class="index_icon" bindtap='toTap' data-url="../pcrepair/pcrepair?name=订单查询">
+      <view class="icon">
+        <view class="images">
+          <image src="../../images/index/icon1.png"></image>
+        </view>
+        <view class="text">
+          电脑义诊
+        </view>
+      </view>
+    </view>
+
+    <view class="tips">
+      <view class="tipbar">
+        <text class="tipbar_text">数据统计</text>
+      </view>
+      <view class="tipbody">
+        <view class="tip_pic">
+          <image class="image" src="../../images/index/pic.png" />
+        </view>
+        <view class="tip_all">
+          <view class="tip_left">
+            <text class="tipdealing_text">已取消</text>
+            <text class="tipdealing_text_num">{{cancelNum}}</text>
+          </view>
+          <view class="tip_center">
+            <text class="tipsearch_text">正在处理</text>
+            <text class="tipsearch_text_num">{{acceptNum}}</text>
+          </view>
+          <view class="tip_right">
+            <text class="tipfinish_text">已完成</text>
+            <text class="tipfinish_text_num">{{dealNum}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="rank">
+      <view class="rank_title" bindtap="toRankList">
+        <text class="rank_title_text">排行榜</text>
+        <view class="image">
+          <image class="rank_title_image" src="../../images/index/many.png"></image>
+        </view>
+      </view>
+
+      <view class="rank_body">
+        <block wx:if="{{rank[0] != null}}">
+          <block wx:for-items="{{rank}}" wx:key="*rank">
+            <view class="item" bindtap="toRatingTech" data-url="../rating_technician/rating_technician?tid={{item.tid}}" hover-class="hover_class">
+              <view class="image">
+                <view wx:if="{{item.ranknum == 1}}">
+                  <image class="img1" src="../../images/index/rank1.png"></image>
+                </view>
+                <view wx:elif="{{item.ranknum == 2}}">
+                  <image class="img1" src="../../images/index/rank2.png"></image>
+                </view>
+                <view wx:elif="{{item.ranknum == 3}}">
+                  <image class="img1" src="../../images/index/rank3.png"></image>
+                </view>
+                <image class="img" src="{{item.avatarurl}}"></image>
+              </view>
+              <view class="info">
+                <view class="info_nickname">{{item.nickname}}</view>
+                <view class="info_recode">
+                  <text class="info_recode_text">已完成订单：{{item.t_completed_number}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </block>
+        <block wx:else>
+          <view class="nobody">无人上榜</view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,41 @@
+{
+  "pages": [
+    
+    "pages/authorize/authorize",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/pcrepair/pcrepair",
+    "pages/pcrepair_content/pcrepair_content",
+    "pages/mine/mine",
+    "pages/rating/rating",
+    "pages/assess/assess",
+    "pages/test/test",
+    "pages/account/account",
+    "pages/ranklist/ranklist",
+    "pages/rating_technician/rating_technician",
+    "pages/authentication/authentication"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#292421",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#0fb6a5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/tabbar/index.png",
+        "selectedIconPath": "images/tabbar/index_HL.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "用户中心",
+        "iconPath": "images/tabbar/mine.png",
+        "selectedIconPath": "images/tabbar/mine_HL.png"
+      }
+    ]
+  }
+}

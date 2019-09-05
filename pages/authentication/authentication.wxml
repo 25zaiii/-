@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="body">
+    <view class="box1">
+      <textarea class="textarea1" bindinput="bindinput1" placeholder="请输入手机号" maxlength='11'></textarea>
+    </view>
+    <view class="box2">
+      <textarea class="textarea2" bindinput="bindinput2" placeholder="短信验证码" maxlength='6'></textarea>
+      <button class="send" size="default" bindtap="sendCode" disabled="{{disabled}}">{{tip}}</button>
+    </view>
+  </view>
+  <view class="button" bindtap="authenNow">
+    <text class="button_txt">确认</text>
+  </view>
+  <block wx:if="{{!invisibility}}">
+    <view class="button" bindtap="authenAfter">
+      <text class="button_txt">稍后认证</text>
+    </view>
+  </block>
+</view>

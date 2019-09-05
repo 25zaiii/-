@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "电脑义诊预约系统",
+  "enablePullDownRefresh": true,
+  "navigationStyle": "custom" 
+}

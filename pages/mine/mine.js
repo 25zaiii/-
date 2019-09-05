@@ -20,41 +20,38 @@ Page({
     var that=this
     var userInfo = wx.getStorageSync('userInfo')
     var token = wx.getStorageSync('token')
-
-    // wx.showLoading({
-    //   title: '正在加载',
-    //   mask: true
-    // })
-    if (userInfo) {
-      that.setData({
-        userInfo: userInfo,
-        hasUserInfo: true
-      })
-    } else {
-      wx.getUserInfo({
-        success: res => {
-          wx.setStorageSync('userInfo', res.userInfo)
-          that.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+      if (userInfo) {
+        that.setData({
+          userInfo: userInfo,
+          hasUserInfo: true
+        })
+      } else {
+        wx.getUserInfo({
+          success: res => {
+            wx.setStorageSync('userInfo', res.userInfo)
+            that.setData({
+              userInfo: res.userInfo,
+              hasUserInfo: true
+            })
+          }
+        })
+      }
+      wx.request({
+        url: app.globalData.url + '/api/request_get_sr_status',
+        data: {
+          token: token
+        },
+        success: function (res) {
+          // wx.hideLoading()
+          if (res.data.results != null) {
+            that.setData({
+              reply_status: res.data.results
+            })
+          }
         }
       })
-    }
-    wx.request({
-      url: app.globalData.url + '/api/request_get_sr_status',
-      data: {
-        token: token
-      },
-      success: function(res) {
-        // wx.hideLoading()
-        if (res.data.results != null) {
-          that.setData({
-            reply_status: res.data.results
-          })
-        }   
-      }
-    })
+    
+    
   },
   onShow: function () {
     var that = this

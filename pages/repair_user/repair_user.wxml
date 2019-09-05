@@ -1,0 +1,6 @@
+<!--pages/repair/repair.wxml-->
+
+<view class="jz">
+  <image style="width:200px;height=200px" src="../../images/componet/kaifazhong.png" />
+  <text style="font-size:40rpx;font-weight:800;color:rgb(70, 162, 223)">正在开发中</text>
+</view>

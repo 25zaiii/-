@@ -5,6 +5,7 @@ App({
   },
   globalData: {
     url: 'https://www.xujcyizhen.com',
-    tel_status: -1
+    tel_status: -1,
+    tempFilePaths: null
   }
 })

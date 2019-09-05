@@ -1,0 +1,57 @@
+<view class="container">
+  <block wx:if="{{c_status != 0}}">
+    <view class="user_rating">
+      <view class="username">
+        <text class="username_txt">用户评价</text>
+      </view>
+      <view class="rating">
+        <text class="rating_txt">{{content}}</text>
+      </view>
+      <view class="time">
+        <text class="time_txt">{{creat_time}}</text>
+      </view>
+      <block wx:if="{{reply != null}}">
+        <view class="reply">
+          <block wx:if="{{r_modify_num == 0}}">
+            <view class="reply_left">
+              <text class="title">技术员回复：</text>
+              <text class="content">{{reply}}</text>
+            </view>
+            <view class="reply_right"> 
+              <text class="btn1" bindtap="alterReply">修改</text>
+            </view>
+          </block>
+          <block wx:else>
+            <view class="reply_all">
+              <text class="title1">技术员回复：</text>
+              <text class="content1">{{reply}}</text>
+            </view>
+              <!-- <text class="btn2">修改</text> -->
+          </block>
+        </view>
+      </block>
+    </view>
+
+    <block wx:if="{{reply == null}}">
+      <view class="replybox">
+        <form bindsubmit="submit">
+          <textarea class="textarea" bindinput="bindText" maxlength='140' placeholder="回复请输入..." name="textarea"></textarea>
+          <text class="txt">{{txt_length}}/140</text>
+          <button form-type="submit" class="btn">回复</button>
+        </form>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="noRating">
+      暂无评论哦
+    </view>
+  </block>
+
+  <modal hidden="{{hiddenModal}}" title="修改" confirm-text="提交" cancel-text="取消" bindconfirm="modelconfirm" bindcancel="modelcancel">
+    <view class="alterbox">
+      <textarea class="textarea" bindinput="bindText" maxlength='140' placeholder="在此输入..." name="textarea" value="{{txt}}"></textarea>
+      <text class="txt">{{txt_length}}/140</text>
+    </view>
+  </modal>
+</view>

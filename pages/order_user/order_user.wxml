@@ -1,0 +1,55 @@
+<!--order.wxml-->
+<view class="container">
+  <view class="page__hd">
+    订单表
+  </view>
+
+
+  <view class="page-body">
+
+    <!-- <view class="topic_title">
+      <view class='com-sTxt'>
+        <input bindinput="getTitle" type="text" auto-focus/>
+      </view>
+    </view> -->
+
+    <view class="topic">
+      <view class='com-sTxt'>
+        <textarea style="width:650rpx;height:180rpx" class="full" bindblur='getContent' maxlength='200' auto-focus='true' value='{{msg}}'></textarea>
+      </view>
+    </view>
+
+    <view class="topic_select">
+      <Select prop-array='{{selectArray}}' bind:myget='getDate'></Select>
+    </view>
+
+    <view class="weui-uploader">
+      <view class="weui-uploader__files">
+        <block wx:for="{{imageList}}" wx:for-item="image" wx:for-index='idx' wx:key="img">
+          <view class="weui-uploader__file">
+            <image class="weui-uploader__img" src="{{image}}" data-id="{{idx}}" data-src="{{image}}" bindtap="previewImage"></image>
+          </view>
+        </block>
+      </view>
+      <view class="weui-uploader__input-box">
+        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+      </view>
+    </view>
+
+    <view class="section-2">
+      <view class="jz">
+        <view class="topic_t">
+          <view style="text-align: center;" bindtap="submit">提交</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- <view class="section-2">
+      <view class="btn-area">
+        <button bindtap="returnToIndex">返回首页</button>
+      </view>
+    </view> -->
+
+  </view>
+
+</view>

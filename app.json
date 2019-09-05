@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/authorize/authorize",
     "pages/index/index",
     "pages/logs/logs",
@@ -13,7 +12,13 @@
     "pages/account/account",
     "pages/ranklist/ranklist",
     "pages/rating_technician/rating_technician",
-    "pages/authentication/authentication"
+    "pages/authentication/authentication",
+    "pages/pcrepair_user/pcrepair_user",
+    "pages/order_user/order_user",
+    "pages/repair_user/repair_user",
+    "pages/write_rating_user/write_rating_user",
+    "pages/rating_user/rating_user",
+    "pages/pcrepair_content_user/pcrepair_content_user"
   ],
   "window": {
     "backgroundTextStyle": "light",

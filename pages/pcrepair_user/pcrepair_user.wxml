@@ -1,0 +1,95 @@
+<view class="container">
+  <view class='head'>
+    <block wx:for-items="{{navbar_up}}" wx:key='*navbar_up'>
+      <view class="head_text {{currentNavbar_up==item.key?'active':''}}" bindtap="switchNavbar_up" data-key="{{item.key}}">
+        {{item.name}}
+      </view>
+    </block>
+  </view>
+  <view class="body">
+
+    <scroll-view scroll-x="true">
+      <view class="body_navbar">
+        <block wx:for-items="{{navbar_down}}" wx:key='*navbar_down'>
+          <view class="body_navbar_text {{currentNavbar_down==item.key?'active':''}}" bindtap="switchNavbar_down" data-key="{{item.key}}">
+            {{item.name}}
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+
+    <view class="body_order">
+      <scroll-view scroll-y="true">
+        <!-- style='height: {{scroll_height}}rpx' -->
+        <block wx:if="{{order[0] != null}}">
+          <block wx:for-items="{{order}}" wx:key='*order' wx:for-index="bindex">
+            <view class="order" bindtap="toContent" data-url="../pcrepair_content/pcrepair_content?roid={{item.roid}}&status={{item.o_status}}&c_status={{item.c_status}}" hover-class="hover_order">
+              <view class="text_area">
+                <view class="area_head">
+                  <view class="avatar">
+                    <image class="img" src="{{item.avatarurl}}"></image>
+                  </view>
+                  <view class="nickname">
+                    <text class="nickname_text">{{item.nickname}}</text>
+                    <text class="time">{{item.creat_time}}</text>
+                  </view>
+                  <view class="btn_area">
+
+                    <block wx:if='{{item.o_status==3}}'>
+
+                      <block wx:if="{{item.r_status==1}}">
+                        <view class='reddot'></view>
+                      </block>
+                      <block wx:if="{{item.r_status!=0}}">
+                        <view class="btn" catchtap="toRating" data-url="../rating/rating?roid={{item.roid}}&c_status={{item.c_status}}&status={{item.o_status}}&r_status={{item.r_status}}" hover-stop-propagation='true' hover-class="hover_btn">
+                          <text class="btn_txt">技术员回复</text>
+                        </view>
+                      </block>
+                      <block wx:if="{{item.c_status!=0}}">
+                        <view class="btn" catchtap="toRating" data-url="../write_rating/write_rating?roid={{item.roid}}&c_status={{item.c_status}}" hover-stop-propagation='true' hover-class="hover_btn">
+                          <text class="btn_txt">修改评价</text>
+                        </view>
+                      </block>
+                    </block>
+                    <block wx:if="{{item.o_status==2}}">
+                      <view class="order_status">
+                        待确认完成
+                      </view>
+                    </block>
+                  </view>
+                </view>
+                <block wx:if="{{item.classname == 'order'}}">
+                  <view class="area_body">
+                    <view class="content">
+                      <text class="content_text">{{item.content}}</text>
+                    </view>
+                    <view class="body_img">
+                      <block wx:for-items="{{item.imageurl}}" wx:key='*imageurl' wx:if="{{index < 2}}">
+                        <!-- <view class="pic"> -->
+                          <image src="{{item}}?x-oss-process=image/resize,m_fill,h_100,w_50" data-src="{{item}}?x-oss-process=image/resize,m_fill,h_100,w_50" data-bindex="{{bindex}}" catchtap="previewImg" mode="scaleToFill" />
+                        <!-- </view> -->
+                      </block>
+                    </view>1 k 
+                  </view>
+                </block>
+                <block wx:else>
+                  <view class="area_body1">
+                    <view class="content1">
+                      <text class="content_text1">{{item.content}}</text>
+                    </view>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </block>
+        </block>
+        <block wx:else>
+          <view class="noOrder">
+            暂无订单哦
+          </view>
+        </block>
+      </scroll-view>
+
+    </view>
+  </view>
+</view>

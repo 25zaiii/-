@@ -1,0 +1,29 @@
+<!--pages/write_rating/write_rating.wxml-->
+<view class="container">
+  <view class="page__hd">
+    评价
+  </view>
+
+
+  <view class="page-body">
+
+    <form bindsubmit="submit">
+      <view class="topic">
+        <view class='com-sTxt'>
+          <textarea style="width:650rpx;height:180rpx" class="full" bindblur='getRating' maxlength='200' auto-focus='true' name="textarea" value='{{rating_content}}'></textarea>
+        </view>
+      </view>
+
+      <view class="section-2">
+        <view class="jz">
+          <view class="topic_t">
+            <button style="width:272px;background-color:white;font-size:30rpx" form-type="submit" class="btn">评价</button>
+            <!-- <view style="text-align: center;" form-type="submit" bindtap="submit">提交</view> -->
+          </view>
+        </view>
+      </view>
+    </form>
+
+  </view>
+
+</view>

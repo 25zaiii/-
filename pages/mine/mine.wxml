@@ -17,10 +17,4 @@
     </block>
     <image class="userassess_image" src="../../images/mine/many.png"></image>
   </view>
-  <!-- 
-  <view class="userset" hover-class="hover_css">
-    <text class="userset_text" decode="{{true}}" >设置&emsp;&emsp;</text>
-    <image class="userset_image" src="../../images/mine/many.png"></image>
-  </view>
-  -->
 </view>

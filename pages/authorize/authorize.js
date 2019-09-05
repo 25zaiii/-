@@ -98,23 +98,21 @@ Page({
             success: function(res) {
               //wx.setStorageSync('id', res.data.id)
               wx.hideLoading()
+              console.log(res)
               if (res.data) {
                 app.globalData.tel_status = res.data.tel_status
+                wx.setStorageSync('id', res.data.id)
                 //console.log("tel_status:"+res.data.tel_status)
                 if (res.data.tel_status == 0) {
+                  
                   wx.reLaunch({
                     url: '../authentication/authentication',
                   })
                 } else if (res.data.tel_status == 1) {
-                  if (res.data.id == 0) { //技术员身份
-                    wx.reLaunch({
-                      url: '../index/index',
-                    })
-                  } else {
-                    wx.reLaunch({
-                      url: '../index/index',
-                    })
-                  }
+          
+                  wx.reLaunch({
+                    url: '../index/index',
+                  })
                 }
               }
             }
@@ -158,19 +156,16 @@ Page({
                           app.globalData.tel_status = res.data.tel_status
 
                           if (res.data.tel_status == 0) {       //未认证电话号码
+                          
                             wx.reLaunch({                       //跳转至认证页面
                               url: '../authentication/authentication',  
                             })
                           } else if (res.data.tel_status == 1) {    //已认证号码
-                            if (res.data.id == 0) { //技术员身份
-                              wx.reLaunch({
-                                url: '../index/index',
-                              })
-                            } else {
-                              wx.reLaunch({
-                                url: '../index/index',
-                              })
-                            }
+                            
+                            wx.reLaunch({
+                              url: '../index/index',
+                            })
+                            
                           }
                         }
                       }
@@ -239,15 +234,11 @@ Page({
                       url: '../authentication/authentication',
                     })
                   } else if (res.data.tel_status == 1) {    //已认证号码
-                    if (res.data.id == 0) { //技术员身份
+                    
                       wx.reLaunch({
                         url: '../index/index',
                       })
-                    } else {
-                      wx.reLaunch({
-                        url: '../index/index',
-                      })
-                    }
+                    
                   }
                 }
               }
